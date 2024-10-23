@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+body {
+    background: #f2f4f7;
+    margin: 0;
+}
+p{
+    margin: 8px;
+    color: red;
+}
+.right-section {
+    display: flex;
+    padding-top: 150px;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.main-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 395px;
+    max-height: 100%;
+    background: #f2f4f7;
+    text-align: center;
+}
+
+.login {
+    background: #fff;
+    height: 365px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    border-radius: 8px;
+}
+
+.login-controls {
+    margin-top: 15px;
+    font-size: 17px;
+    padding: 14px 16px;
+    width: 330px;
+    border-radius: 6px;
+    border-color: #dadde1;
+    border-style: double;
+
+}
+
+.btns{
+    margin-top: 30px;
+}
+
+.log-butn {
+    margin-top: 30px;
+    padding: 11px 16px;
+    width: 365px;
+    background: #0866ff;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+    </style>
+</head>
+<body>   
+    <div class="right-section">
+        <div class="main-login">
+            <div class="login">
+                <h1>LOGIN PAGE</h1>
+                <form action="/login" method="post">
+                    <input class="login-controls" type="text" placeholder="Username" name="username" autocomplete="off" required>
+                    <input class="login-controls btns" type="password" placeholder="Password" name="password" autocomplete="off" required>
+                    <button  class="log-butn" name="submit" value="Send">Log in</button>
+                </form>
+                <p>{{.error}}</p>
+            </div>  
+         </div>
+     </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: #f2f4f7;
+        }
+        .home{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn{
+            position: relative;
+            text-decoration: none;
+            top: 0;
+            left: 400px;
+            border: none;
+            border-radius: 6px;
+            background-color: blue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            padding: 15px;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="home">
+        <h1 class="welcome">WELCOME {{.username}}</h1>
+        <form action="/logout" method="POST">
+            <button class="btn" type="submit">Logout</button>
+        </form>
+    </div>>
+</body>
+</html>
